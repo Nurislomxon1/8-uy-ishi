@@ -122,6 +122,7 @@ h4 {
   border: none;
   border-radius: 60px ;
   outline: none;
+  
 }
 .form-input:focus {
   box-shadow: 0 0 2px  #7296EC;
@@ -134,11 +135,11 @@ h4 {
   
 }
 .form-input {
-
-  background-image: url("../img/search.svg");
+  
+  background-image: url("../images/search.svg");
   background-repeat: no-repeat;
   background-position: 15px 12px;
-
+  
 }
 .search-text{
   font-size: 14px;
@@ -315,13 +316,19 @@ h4 {
 .site-article {
   width: 1050px;
   margin-right: auto;
+  margin-bottom: 60px;
   margin-left: auto;
-  background-image: url("../images/article.png");
+  background-image: url("../images/article-bg.png");
   border-radius: 10px;
 }
+
 .article-inner {
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-right: 71px;
   padding-left: 21px;
@@ -332,16 +339,37 @@ h4 {
   font-size: 20px;
   line-height: 26px;
 }
-
 .article-link {
   background-color: #f78b3b;
   font-style: normal;
   font-weight: 500;
-  
   font-size: 20px;
   line-height: 24px;
   padding: 13px 30px;
   border-radius: 10px;
+  border-color: transparent;
+}
+.text-black {
+  color: #000;
+}
+
+.text-white {
+  color: #fff;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+button, select {
+  text-transform: none;
+}
+button, input {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
 /*WORLD NEWS */
@@ -368,8 +396,8 @@ h4 {
 }
 
 .world-news-item-img {
-  width: 210px;
-  height: 165px;
+  width: 797px;
+  height: 300px;
   margin-right: 15px;
   border-radius: 10px;
 }
@@ -417,11 +445,11 @@ h4 {
 }
 
 .box-1::before{
-  background-image: url("../img/kb.jpg");
+  background-image: url("../images/kb.jpg");
 }
 
 .box-2::before{
-  background-image: url("../img/cars.jpg");
+  background-image: url("../images/cars.jpg");
 }
 
 .box-3::before{
@@ -432,39 +460,39 @@ h4 {
 }
 
 .box-5::before{
-  background-image: url("../img/kb.jpg");
+  background-image: url("../images/kb.jpg");
 }
 
 .box-6::before{
-  background-image: url("../img/pp-news.jpg");
+  background-image: url("../images/pp-news.jpg");
 }
 
 .box-6::before{
-  background-image: url("../img/pp-news.jpg");
+  background-image: url("../images/pp-news.jpg");
 }
 
 .box-7::before{
-  background-image: url("../img/dns-club.jpg");
+  background-image: url("../images/dns-club.jpg");
 }
 
 .box-8::before{
-  background-image: url("../img/sputnik-uzb.jpg");
+  background-image: url("../images/sputnik-uzb.jpg");
 }
 
 .box-9::before{
-  background-image: url("../img/i-reactor.jpg");
+  background-image: url("../images/i-reactor.jpg");
 }
 
 .box-10::before{
-  background-image: url("../img/company.jpg");
+  background-image: url("../images/company.jpg");
 }
 
 .box-11::before{
-  background-image: url("../img/ferghana.jpg");
+  background-image: url("../images/ferghana.jpg");
 }
 
 .box-12::before{
-  background-image: url("../img/fbm.jpg");
+  background-image: url("../images/fbm.jpg");
 }
 
 
@@ -540,6 +568,14 @@ h4 {
   color: #000;
 }
 
+.interests-list {
+  display: flex;
+}
+
+.latest-news-item:nth-child(2) {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 /* ASIDE BOTTOM */
 .aside-bottom{
   margin-top: 10px;
@@ -609,6 +645,91 @@ h4 {
 .footer-bottom-item:nth-child(3){
   margin-right: 33px;
 }
+
+
+/* modal  */
+.modal[open] {
+  animation: animate 3s forwards;
+  -webkit-animation: animate 3s forwards;
+}
+.modal {
+  position: relative;
+  width: 850px;
+  text-align: center;
+  padding: 50px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border: none;
+}
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.modal {
+  position: relative;
+  width: 850px;
+  text-align: center;
+  padding: 50px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border: none;
+}
+dialog {
+  user-select: text;
+  visibility: visible;
+}
+dialog {
+  color: canvastext;
+}
+.btn {
+  background-color: none;
+  border: none;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+button, select {
+  text-transform: none;
+}
+button, input {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.btn {
+  appearance: auto;
+  writing-mode: horizontal-tb !important;
+  font-style: "Rubik";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #fff;
+  background: #f78b3b;
+  border-radius: 10px;
+  
+  
+}
+
+/* madal end */
 
 /* contacts */
 .contact-title {
@@ -722,7 +843,7 @@ h4 {
 
 .info-list {
   margin-top: 0;
-  margin-bottom: 00px;
+  margin-bottom: 10px;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 25px;
